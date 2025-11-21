@@ -1,0 +1,112 @@
+body {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	min-height: 100vh;
+	margin: 0;
+	background-color: #f4f7f6;
+	font-family: 'Arial', sans-serif;
+	padding: 20px; /* Padding untuk layar kecil */
+}
+
+.calculator {
+	border-radius: 15px;
+	box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+	padding: 20px;
+	background-color: #ffffff;
+	width: 100%; /* Membuat responsif */
+	max-width: 400px; /* Batas lebar maksimum */
+}
+
+.display {
+	width: 100%;
+	border: none;
+	background-color: #e8eef2;
+	color: #333;
+	font-size: 2.2em;
+	text-align: right;
+	padding: 15px;
+	margin-bottom: 20px;
+	border-radius: 10px;
+	box-sizing: border-box;
+}
+
+.buttons {
+	display: grid;
+	grid-template-columns: repeat(4, 1fr);
+	gap: 10px;
+}
+
+.btn {
+	border: none;
+	border-radius: 10px;
+	padding: 20px 0;
+	font-size: 1.2em;
+	cursor: pointer;
+	transition: background-color 0.1s ease;
+	user-select: none;
+}
+
+.btn:active {
+	opacity: 0.8;
+}
+
+.number {
+	background-color: #e0e0e0;
+	color: #333;
+}
+
+.number:hover {
+	background-color: #d1d1d1;
+}
+
+.operator {
+	background-color: #ff9500;
+	color: white;
+}
+
+.operator:hover {
+	background-color: #e68600;
+}
+
+.clear {
+	background-color: #ff3b30;
+	color: white;
+}
+
+.clear:hover {
+	background-color: #e6352c;
+}
+
+.equals {
+	grid-row: span 2;
+	background-color: #34c759;
+	color: white;
+	height: 100%;
+}
+
+.equals:hover {
+	background-color: #2fb950;
+}
+
+.zero {
+	grid-column: span 2;
+}
+
+/* --- Media Query untuk Layar Kecil (Smartphone) --- */
+@media (max-width: 480px) {
+	.btn {
+		padding: 18px 0;
+		font-size: 1.1em;
+	}
+
+	.display {
+		font-size: 2em;
+		padding: 12px;
+	}
+
+	.calculator {
+		width: 90%;
+		padding: 15px;
+	}
+}
